@@ -1,1 +1,0 @@
-scheduling_algorithm.Architecture
