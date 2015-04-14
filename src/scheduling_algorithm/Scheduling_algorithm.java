@@ -23,6 +23,7 @@ public class Scheduling_algorithm {
      */
     public static void main(String[] args) {
          double alpha, beta, gamma,delta,eta, sigma, mu;
+         String filename="TG5";
         alpha=Double.parseDouble(args[0]);
         beta=Double.parseDouble(args[1]);
         gamma=Double.parseDouble(args[2]);
@@ -30,13 +31,14 @@ public class Scheduling_algorithm {
         eta=Double.parseDouble(args[4]);
         sigma=Double.parseDouble(args[5]);
         mu=Double.parseDouble(args[6]);
+        filename= args[7];
         // TODO code application logic here
         //VSL VSL0 = new VSL();
         double[] time= new double[10];
         double[] energy= new double[10];
         int j,n_task=0;
         String [] task_graph_string = null, comm_graph_string = null; 
-        File tgff_file = new File("../lan29/simple.tgff");
+        File tgff_file = new File(filename+".txt");
         if (!tgff_file.isFile())
             {
                 System.out.println("Check file name");      
@@ -75,7 +77,7 @@ public class Scheduling_algorithm {
 
                 if (line.contains("@COMP"))
                     while (scan.hasNextLine()) {
-                        comm_graph_string[j-8] = comm_graph_string[j-8] + line + "\n";
+                        comm_graph_string[j-1] = comm_graph_string[j-1] + line + "\n";
                         line = scan.nextLine();
                         if (line.contains("}")){
                             System.out.println("break");
@@ -96,10 +98,10 @@ public class Scheduling_algorithm {
         
         
        
-      for (int i=0;i<8;i++){
+     // for (int i=0;i<8;i++){
     //  inputGraph1(graph);
        Graph graph = new Graph();
-     constructGraph(graph,task_graph_string[i],comm_graph_string[0]);
+     constructGraph(graph,task_graph_string[0],comm_graph_string[0]);
     // inputGraph1(graph);  
        
        //Giai thuat
@@ -113,9 +115,9 @@ public class Scheduling_algorithm {
       // int[] a=new int[graph.nVerts];
       // a=sc.createNodeList();
        sc.dynamic_schedule(); 
-       time[i]=graph.makespan;
-       energy[i]=graph.energy;
-       }
+       time[0]=graph.makespan;
+       energy[0]=graph.energy;
+      // }
        
           
            
@@ -124,10 +126,11 @@ public class Scheduling_algorithm {
             {
   try{
   // Create file 
-  FileWriter fstream = new FileWriter("../lan29/out8.txt");
+  FileWriter fstream = new FileWriter(filename+"_out.txt");
   BufferedWriter out = new BufferedWriter(fstream);
+  out.write(filename+"\r\n");
   out.write("Time2   Energy2"+"\r\n");
-  for (int i=0;i<10;i++){
+  for (int i=0;i<1;i++){
   //BufferedWriter out = new BufferedWriter(fstream);    
   out.write(Double.toString(time[i])+'\t' + Double.toString(energy[i])+"\r\n");
       
