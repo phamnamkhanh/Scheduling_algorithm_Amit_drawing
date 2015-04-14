@@ -16,13 +16,28 @@ public class schedule {
      private Graph graph;
      //public   ArrayList  sort;// topological queue
      public static FPGA fpga;
+     public static double alpha;
+     public static double beta;
+     public static double gamma;
+     public static double delta;
+     public static double eta;
+     public static double sigma;
+     public static double mu;
         
         // constructor
-    public schedule(Graph g, int num_column){
+    public schedule(Graph g, int num_column, double a, double b, double c, double d, double e, double s, double m){
         graph = g;
-        //sort= new  ArrayList();
-        
+               
         fpga=new FPGA(num_column);
+        alpha = a;
+        beta = b;
+        gamma=c;
+        delta=d;
+        eta=e;
+        sigma=s;
+        mu=m;
+        
+        
         
         }
     
@@ -303,17 +318,18 @@ public class schedule {
         graph.vertexList[n].eft_sl=graph.vertexList[n].est_sl+graph.vertexList[n].comp_time;
     }
     public void compute_f(int n){
-        int alpha, beta, gamma,delta,eta, sigma, mu;
+//        int alpha, beta, gamma,delta,eta, sigma, mu;
         // f= alpha*BT(b_level) + beta*TL(t_level) + gamma*C (weight) +(-) delta*RT(comp_time) - eta*LK(lk) + mu*EET(est_sl) + sigma*ERT(rst)
         // first 4 fators: BT, TL, weight, comp_time => is static metrics for EACH TASK => highly dependent on the TG itself
         // last 3 factors: LK, EET, ERT => dynamic metrics during scheduling
-        alpha=4;
-        beta=-10;
-        gamma=10;
-        delta=-1;
-        eta=0;
-        mu=-2;
-        sigma=0;
+//        alpha=4;
+//        beta=-10;
+//        gamma=10;
+//        delta=-1;
+//        eta=0;
+//         sigma=0;
+//        mu=-2;
+//       
         graph.vertexList[n].priority=alpha*graph.vertexList[n].b_level +beta*graph.vertexList[n].t_level+ gamma*graph.vertexList[n].weight +delta*graph.vertexList[n].comp_time
                 + eta*graph.vertexList[n].lk + mu*graph.vertexList[n].est_sl + sigma*graph.vertexList[n].rst;
     }

@@ -22,6 +22,14 @@ public class Scheduling_algorithm {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+         double alpha, beta, gamma,delta,eta, sigma, mu;
+        alpha=Double.parseDouble(args[0]);
+        beta=Double.parseDouble(args[1]);
+        gamma=Double.parseDouble(args[2]);
+        delta=Double.parseDouble(args[3]);
+        eta=Double.parseDouble(args[4]);
+        sigma=Double.parseDouble(args[5]);
+        mu=Double.parseDouble(args[6]);
         // TODO code application logic here
         //VSL VSL0 = new VSL();
         double[] time= new double[10];
@@ -67,7 +75,7 @@ public class Scheduling_algorithm {
 
                 if (line.contains("@COMP"))
                     while (scan.hasNextLine()) {
-                        comm_graph_string[j-10] = comm_graph_string[j-10] + line + "\n";
+                        comm_graph_string[j-8] = comm_graph_string[j-8] + line + "\n";
                         line = scan.nextLine();
                         if (line.contains("}")){
                             System.out.println("break");
@@ -77,9 +85,9 @@ public class Scheduling_algorithm {
                     }
                 }
             
-                for (j =0; j < n_task;j++){
-                    
-                }
+//                for (j =0; j < n_task;j++){
+//                    
+//                }
             
                       
         } catch (FileNotFoundException ex) {
@@ -88,7 +96,7 @@ public class Scheduling_algorithm {
         
         
        
-      for (int i=0;i<10;i++){
+      for (int i=0;i<8;i++){
     //  inputGraph1(graph);
        Graph graph = new Graph();
      constructGraph(graph,task_graph_string[i],comm_graph_string[0]);
@@ -97,7 +105,7 @@ public class Scheduling_algorithm {
        //Giai thuat
       // algorithm al = new algorithm(graph);
        //algorithm.schedule();
-       schedule sc= new schedule(graph,8);
+       schedule sc= new schedule(graph,8,alpha, beta, gamma,delta,eta, sigma, mu);
        //al.compute_adj();
        //al.compute_b_L();
        //al.compute_path();
@@ -116,7 +124,7 @@ public class Scheduling_algorithm {
             {
   try{
   // Create file 
-  FileWriter fstream = new FileWriter("../lan29/out6.txt");
+  FileWriter fstream = new FileWriter("../lan29/out8.txt");
   BufferedWriter out = new BufferedWriter(fstream);
   out.write("Time2   Energy2"+"\r\n");
   for (int i=0;i<10;i++){
