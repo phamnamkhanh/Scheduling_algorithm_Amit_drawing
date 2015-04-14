@@ -1,0 +1,197 @@
+@HYPERPERIOD 270
+
+@TASK_GRAPH 0 {
+	PERIOD 270
+
+	TASK t0_0	TYPE 0 
+	TASK t0_1	TYPE 1 
+	TASK t0_2	TYPE 1 
+	TASK t0_3	TYPE 0 
+
+	ARC a0_0 	FROM t0_0  TO  t0_1 TYPE 0
+	ARC a0_1 	FROM t0_0  TO  t0_2 TYPE 0
+	ARC a0_2 	FROM t0_1  TO  t0_3 TYPE 0
+	ARC a0_3 	FROM t0_2  TO  t0_3 TYPE 0
+
+	HARD_DEADLINE d0_0 ON t0_3 AT 300
+}
+
+
+@TASK_GRAPH 1 {
+	PERIOD 270
+
+	TASK t1_0	TYPE 2 
+	TASK t1_1	TYPE 2 
+	TASK t1_2	TYPE 2 
+
+	ARC a1_0 	FROM t1_0  TO  t1_1 TYPE 0
+	ARC a1_1 	FROM t1_0  TO  t1_2 TYPE 0
+
+	HARD_DEADLINE d1_0 ON t1_1 AT 200
+	HARD_DEADLINE d1_1 ON t1_2 AT 200
+}
+
+
+@TASK_GRAPH 2 {
+	PERIOD 270
+
+	TASK t2_0	TYPE 2 
+	TASK t2_1	TYPE 0 
+	TASK t2_2	TYPE 2 
+
+	ARC a2_0 	FROM t2_0  TO  t2_1 TYPE 0
+	ARC a2_1 	FROM t2_1  TO  t2_2 TYPE 0
+	ARC a2_2 	FROM t2_0  TO  t2_2 TYPE 0
+
+	HARD_DEADLINE d2_0 ON t2_2 AT 300
+}
+
+
+@TASK_GRAPH 3 {
+	PERIOD 270
+
+	TASK t3_0	TYPE 1 
+	TASK t3_1	TYPE 2 
+
+	ARC a3_0 	FROM t3_0  TO  t3_1 TYPE 0
+
+	HARD_DEADLINE d3_0 ON t3_1 AT 200
+}
+
+
+@TASK_GRAPH 4 {
+	PERIOD 270
+
+	TASK t4_0	TYPE 0 
+	TASK t4_1	TYPE 0 
+	TASK t4_2	TYPE 3 
+	TASK t4_3	TYPE 3 
+
+	ARC a4_0 	FROM t4_0  TO  t4_1 TYPE 0
+	ARC a4_1 	FROM t4_0  TO  t4_2 TYPE 0
+	ARC a4_2 	FROM t4_1  TO  t4_3 TYPE 0
+
+	HARD_DEADLINE d4_0 ON t4_2 AT 200
+	HARD_DEADLINE d4_1 ON t4_3 AT 300
+}
+
+
+@TASK_GRAPH 5 {
+	PERIOD 270
+
+	TASK t5_0	TYPE 2 
+	TASK t5_1	TYPE 1 
+	TASK t5_2	TYPE 0 
+
+	ARC a5_0 	FROM t5_0  TO  t5_1 TYPE 0
+	ARC a5_1 	FROM t5_0  TO  t5_2 TYPE 0
+	ARC a5_2 	FROM t5_1  TO  t5_2 TYPE 0
+
+	HARD_DEADLINE d5_0 ON t5_2 AT 300
+}
+
+
+@TASK_GRAPH 6 {
+	PERIOD 270
+
+	TASK t6_0	TYPE 3 
+	TASK t6_1	TYPE 1 
+	TASK t6_2	TYPE 3 
+	TASK t6_3	TYPE 1 
+
+	ARC a6_0 	FROM t6_0  TO  t6_1 TYPE 0
+	ARC a6_1 	FROM t6_1  TO  t6_2 TYPE 0
+	ARC a6_2 	FROM t6_2  TO  t6_3 TYPE 0
+
+	HARD_DEADLINE d6_0 ON t6_3 AT 400
+}
+
+
+@TASK_GRAPH 7 {
+	PERIOD 270
+
+	TASK t7_0	TYPE 1 
+	TASK t7_1	TYPE 0 
+	TASK t7_2	TYPE 1 
+	TASK t7_3	TYPE 1 
+
+	ARC a7_0 	FROM t7_0  TO  t7_1 TYPE 0
+	ARC a7_1 	FROM t7_0  TO  t7_2 TYPE 0
+	ARC a7_2 	FROM t7_1  TO  t7_3 TYPE 0
+	ARC a7_3 	FROM t7_2  TO  t7_3 TYPE 0
+
+	HARD_DEADLINE d7_0 ON t7_3 AT 300
+}
+
+
+@TASK_GRAPH 8 {
+	PERIOD 270
+
+	TASK t8_0	TYPE 3 
+	TASK t8_1	TYPE 0 
+	TASK t8_2	TYPE 3 
+
+	ARC a8_0 	FROM t8_0  TO  t8_1 TYPE 0
+	ARC a8_1 	FROM t8_0  TO  t8_2 TYPE 0
+
+	HARD_DEADLINE d8_0 ON t8_1 AT 200
+	HARD_DEADLINE d8_1 ON t8_2 AT 200
+}
+
+
+@TASK_GRAPH 9 {
+	PERIOD 270
+
+	TASK t9_0	TYPE 3 
+	TASK t9_1	TYPE 1 
+	TASK t9_2	TYPE 0 
+
+	ARC a9_0 	FROM t9_0  TO  t9_1 TYPE 0
+	ARC a9_1 	FROM t9_0  TO  t9_2 TYPE 0
+
+	HARD_DEADLINE d9_0 ON t9_1 AT 200
+	HARD_DEADLINE d9_1 ON t9_2 AT 200
+}
+
+
+
+
+@COMP 0 {
+# price
+  6.50996
+
+#------------------------------------------------------------------------------
+# type version time    weight
+  0    0       2       2
+  1    0       4       3
+  2    0       2       2
+  3    0       5       4
+}
+
+
+@COMP 1 {
+# price
+  5.95323
+
+#------------------------------------------------------------------------------
+# type version time    weight
+  0    0       1       1
+  1    0       3       2
+  2    0       1       1
+  3    0       3       3
+}
+
+
+
+@COMMUN 0 {
+#  price  
+   6.36953
+
+#------------------------------------------------------------------------------
+# type  time   
+  0     1      
+}
+
+
+
+
