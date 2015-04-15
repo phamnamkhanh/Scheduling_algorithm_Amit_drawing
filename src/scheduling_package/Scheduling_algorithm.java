@@ -3,14 +3,14 @@
  * and open the template in the editor.
  */
 package scheduling_package;
-import java.io.BufferedWriter;
+//import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileWriter;
+//import java.io.FileNotFoundException;
+//import java.io.FileWriter;
 import java.util.Scanner;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import java.util.regex.Pattern;
+//import java.util.logging.Level;
+//import java.util.logging.Logger;
+//import java.util.regex.Pattern;
 
 /**
  *
@@ -131,8 +131,8 @@ public class Scheduling_algorithm {
 //                }
             
                       
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(Scheduling_algorithm.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (Exception ex) {
+           System.err.println("Error: " + ex.getMessage());
         }
         
         
@@ -162,25 +162,28 @@ public class Scheduling_algorithm {
        leakage= graph.energy;   
            //write to file
    
-            {
-  try{
-  // Create file 
-  FileWriter fstream = new FileWriter(filename+"_out.txt");
-  BufferedWriter out = new BufferedWriter(fstream);
-  out.write(filename+"\r\n");
-  out.write("Time2   Energy2"+"\r\n");
-  for (int i=0;i<1;i++){
-  //BufferedWriter out = new BufferedWriter(fstream);    
-  out.write(Double.toString(time[i])+'\t' + Double.toString(energy[i])+"\r\n");
-      
-   }
-  //Close the output stream
-  out.close();
-  
-  }catch (Exception e){//Catch exception if any
-  System.err.println("Error: " + e.getMessage());
-  }
-  } 
+//            {
+//  try{
+//  // Create file 
+//  FileWriter fstream = new FileWriter(filename+"_out.txt");
+//  BufferedWriter out = new BufferedWriter(fstream);
+//  out.write(filename+"\r\n");
+//  out.write("Time2   Energy2"+"\r\n");
+//  for (int i=0;i<1;i++){
+//  //BufferedWriter out = new BufferedWriter(fstream);    
+//  out.write(Double.toString(time[i])+'\t' + Double.toString(energy[i])+"\r\n");
+//      
+//   }
+//  //Close the output stream
+//  out.close();
+//  
+//  }catch (Exception e){//Catch exception if any
+//  System.err.println("Error: " + e.getMessage());
+//  }
+//  
+//  
+//  
+//  } 
       
       
       
