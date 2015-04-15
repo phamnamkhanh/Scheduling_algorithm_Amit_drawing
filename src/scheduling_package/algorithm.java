@@ -31,10 +31,10 @@ public class algorithm {
        }*/
        
        for (int i=0; i<graph.nVerts;i++) {
-           //System.out.println("cac dinh cha cua dinh: "+i);
-           //System.out.println(graph.vertexList[i].parent);
-           System.out.println("children of vertex: "+i); 
-           System.out.println(graph.vertexList[i].children);
+           //// System.out.println("cac dinh cha cua dinh: "+i);
+           //// System.out.println(graph.vertexList[i].parent);
+           // System.out.println("children of vertex: "+i); 
+           // System.out.println(graph.vertexList[i].children);
            
        }
         
@@ -55,7 +55,7 @@ public class algorithm {
        }
      
       
-        System.out.println(sort);
+        // System.out.println(sort);
         
         
         
@@ -88,10 +88,10 @@ public class algorithm {
         b= sort.toArray();
         for (int i=0;i<a.length;i++){
             a[i]=(int)b[i];
-            //System.out.println((int)b[i]+(int)b[i+1]);
+            //// System.out.println((int)b[i]+(int)b[i+1]);
         }
         
-//        System.out.println(graph.vertexList[11].children.size());
+//        // System.out.println(graph.vertexList[11].children.size());
         
         
         for (int ni=0;ni<a.length;ni++){
@@ -115,11 +115,11 @@ public class algorithm {
         }
         }
        for (int i=0;i<graph.nVerts;i++){ 
-                      System.out.println(graph.vertexList[i].b_level);
+                      // System.out.println(graph.vertexList[i].b_level);
        }
        for (int i=0;i<graph.nVerts;i++){ 
-            System.out.println("blSucc cua "+i+"   la:");
-           System.out.println(graph.vertexList[i].blSucc);
+            // System.out.println("blSucc cua "+i+"   la:");
+           // System.out.println(graph.vertexList[i].blSucc);
        }
                     
     }
@@ -135,10 +135,10 @@ public class algorithm {
         b= sort.toArray();
         for (int i=0;i<a.length;i++){
             a[i]=(int)b[a.length-i-1];
-            //System.out.println((int)b[i]+(int)b[i+1]);
+            //// System.out.println((int)b[i]+(int)b[i+1]);
         }
         
-       // System.out.println(graph.vertexList[11].parent.size());
+       // // System.out.println(graph.vertexList[11].parent.size());
         
         
         for (int ni=0;ni<a.length;ni++){
@@ -162,7 +162,7 @@ public class algorithm {
         }
         }
        for (int i=0;i<graph.nVerts;i++){ 
-           System.out.println(graph.vertexList[i].t_level_2);
+           // System.out.println(graph.vertexList[i].t_level_2);
        }
         
                     
@@ -178,10 +178,10 @@ public class algorithm {
         b= sort.toArray();
         for (int i=0;i<a.length;i++){
             a[i]=(int)b[a.length-i-1];
-            //System.out.println((int)b[i]+(int)b[i+1]);
+            //// System.out.println((int)b[i]+(int)b[i+1]);
         }
         
-       // System.out.println(graph.vertexList[11].parent.size());
+       // // System.out.println(graph.vertexList[11].parent.size());
         
         
         for (int ni=0;ni<a.length;ni++){
@@ -208,7 +208,7 @@ public class algorithm {
    // xoa nhap
       /*  
         for (int i=0;i<graph.nVerts;i++){ 
-           System.out.println(graph.vertexList[i].t_level);
+           // System.out.println(graph.vertexList[i].t_level);
        }
       */  
                     
@@ -224,9 +224,9 @@ public class algorithm {
        }
   
    // xoa nhap     
-    /*    System.out.println("path of each task");
+    /*    // System.out.println("path of each task");
         for (int i=0;i<graph.nVerts;i++){ 
-           System.out.println(graph.vertexList[i].path);
+           // System.out.println(graph.vertexList[i].path);
        } 
      */   
     }
@@ -253,12 +253,12 @@ public class algorithm {
         //output the blSucc
         for (int i=0;i<graph.nVerts;i++){
            {
-                System.out.println(graph.vertexList[i].blSucc);
+                // System.out.println(graph.vertexList[i].blSucc);
             }
         }
         
         //output the Critical Path
-        System.out.println("critical path");
+        // System.out.println("critical path");
         for (int i=1;i<graph.nVerts;i++){
            if (graph.vertexList[i].isCP){
                 System.out.print(i);
@@ -316,7 +316,7 @@ public class algorithm {
                 
         }
         
-       System.out.println(nodeList);   
+       // System.out.println(nodeList);   
         
         
         

@@ -28,10 +28,10 @@ public class compute_adjacent {
        }
        
        for (int i=0; i<graph.nVerts;i++) {
-           System.out.println("cac dinh cha cua dinh: "+i);
-           System.out.println(graph.vertexList[i].parent);
-           System.out.println("cac dinh con cua dinh: "+i); 
-           System.out.println(graph.vertexList[i].children);
+           // System.out.println("cac dinh cha cua dinh: "+i);
+           // System.out.println(graph.vertexList[i].parent);
+           // System.out.println("cac dinh con cua dinh: "+i); 
+           // System.out.println(graph.vertexList[i].children);
            
        }
         

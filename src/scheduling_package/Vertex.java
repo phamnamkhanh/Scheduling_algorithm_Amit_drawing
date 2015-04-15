@@ -50,7 +50,7 @@ public class Vertex {
         comp_time = time;
         parent = new ArrayList();
         children=new ArrayList();
-        //System.out.println(comp_time_avg);
+        //// System.out.println(comp_time_avg);
         wasVisited = false;
         if (lab==0){
             isEntry = true;

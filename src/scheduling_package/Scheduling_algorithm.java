@@ -80,7 +80,7 @@ public class Scheduling_algorithm {
         File tgff_file = new File(filename+".txt");
         if (!tgff_file.isFile())
             {
-                System.out.println("Check file name");      
+                // System.out.println("Check file name");      
             }  
         try {
             Scanner scan = new Scanner(tgff_file);
@@ -91,7 +91,7 @@ public class Scheduling_algorithm {
                     n_task++;
             }
                 
-            System.out.println(n_task);   
+            // System.out.println(n_task);   
             
             scan = new Scanner(tgff_file);
             task_graph_string = new String [n_task];
@@ -106,7 +106,7 @@ public class Scheduling_algorithm {
                         task_graph_string[j] = task_graph_string[j] + line + "\n";
                         line = scan.nextLine();
                         if (line.startsWith("}")){
-                            System.out.println("break");
+                            // System.out.println("break");
                             j++;
                             break;
 
@@ -119,7 +119,7 @@ public class Scheduling_algorithm {
                         comm_graph_string[j-1] = comm_graph_string[j-1] + line + "\n";
                         line = scan.nextLine();
                         if (line.contains("}")){
-                            System.out.println("break");
+                            // System.out.println("break");
                             j++;
                             break;
                         }
@@ -350,7 +350,7 @@ public class Scheduling_algorithm {
             }
             if (check == 0) {
                 graph.vertexList[i].isEntry = true;
-                System.out.println("Entry task: " + i);
+                // System.out.println("Entry task: " + i);
             }
         }
         
@@ -365,7 +365,7 @@ public class Scheduling_algorithm {
             }
             if (check == 0) {
                 graph.vertexList[i].isExit = true;
-                System.out.println("Exit task: " + i);
+                // System.out.println("Exit task: " + i);
             }
         }
         

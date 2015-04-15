@@ -32,7 +32,7 @@ public class Scheduling_algorithm_1 {
         File tgff_file = new File("../experiment/lan29/simple.tgff");
         if (!tgff_file.isFile())
             {
-                System.out.println("Check file name");      
+                // System.out.println("Check file name");      
             }  
         try {
             Scanner scan = new Scanner(tgff_file);
@@ -43,7 +43,7 @@ public class Scheduling_algorithm_1 {
                     n_task++;
             }
                 
-            System.out.println(n_task);   
+            // System.out.println(n_task);   
             
             scan = new Scanner(tgff_file);
             task_graph_string = new String [n_task];
@@ -58,7 +58,7 @@ public class Scheduling_algorithm_1 {
                         task_graph_string[j] = task_graph_string[j] + line + "\n";
                         line = scan.nextLine();
                         if (line.startsWith("}")){
-                            System.out.println("break");
+                            // System.out.println("break");
                             j++;
                             break;
 
@@ -71,7 +71,7 @@ public class Scheduling_algorithm_1 {
                         comm_graph_string[j-10] = comm_graph_string[j-10] + line + "\n";
                         line = scan.nextLine();
                         if (line.contains("}")){
-                            System.out.println("break");
+                            // System.out.println("break");
                             j++;
                             break;
                         }
@@ -377,7 +377,7 @@ public class Scheduling_algorithm_1 {
 //        File result_file = new File("../experiment/lan18/ilp1//ilp"+l+"_"+n+".lp.html");
 //        if (!result_file.isFile())
 //            {
-//                System.out.println("Check file name");      
+//                // System.out.println("Check file name");      
 //            }  
 //        try {
 //            Scanner scan = new Scanner(result_file);
@@ -398,7 +398,7 @@ public class Scheduling_algorithm_1 {
 //                        e = Float.parseFloat(m.group());
 //                        }
 //                        ilp_ET[i]=(int)e;
-//                      //  System.out.println(ET[i]);
+//                      //  // System.out.println(ET[i]);
 //                   }  
 //                    if (line.contains("rt"+i)&&(count<=i)){
 //                        Matcher m = p.matcher(line); 
@@ -406,9 +406,9 @@ public class Scheduling_algorithm_1 {
 //                        r = Float.parseFloat(m.group());
 //                        }
 //                        ilp_RT[i]=(int)r;
-//                       // System.out.println(RT[i]);
+//                       // // System.out.println(RT[i]);
 //                        count=i;
-//                       // System.out.println(count);
+//                       // // System.out.println(count);
 //                   }  
 //                   
 //                }
@@ -612,7 +612,7 @@ public class Scheduling_algorithm_1 {
             }
             if (check == 0) {
                 graph.vertexList[i].isEntry = true;
-                System.out.println("Entry task: " + i);
+                // System.out.println("Entry task: " + i);
             }
         }
         
@@ -627,7 +627,7 @@ public class Scheduling_algorithm_1 {
             }
             if (check == 0) {
                 graph.vertexList[i].isExit = true;
-                System.out.println("Exit task: " + i);
+                // System.out.println("Exit task: " + i);
             }
         }
         

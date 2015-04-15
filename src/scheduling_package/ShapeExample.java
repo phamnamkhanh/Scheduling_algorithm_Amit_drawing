@@ -65,7 +65,7 @@ public class ShapeExample extends javax.swing.JPanel {
           width = graph.vertexList[i].voltage;
           g2d.fill(new Rectangle2D.Double((float)(phase2_xy[column].getX()), (float)(phase2_xy[column].getY()+(time1/unit)), 8*(N_Vol-width), (time2/unit) - (time1/unit)));
           //g2d.drawString(String.valueOf(i) , (float)(phase1_xy[column].getX()+2), (float)(phase1_xy[column].getY()+12+(time1/unit)));
-          //System.out.println("ve: " + (phase1_xy[column].y+(time1/unit) )+ " " + ((time2/unit) - (time1/unit)));
+          //// System.out.println("ve: " + (phase1_xy[column].y+(time1/unit) )+ " " + ((time2/unit) - (time1/unit)));
       }
       
       Stroke stroke = new BasicStroke(3,
@@ -198,7 +198,7 @@ public class ShapeExample extends javax.swing.JPanel {
           width = graph.vertexList[i].weight;
           g2d.fill(new Rectangle2D.Double((float)(phase1_xy[column].getX()+time1*30), (float)(phase1_xy[column].getY()-30*graph.vertexList[i].weight), (float)(time2*30) - (time1*30),(float) 30*graph.vertexList[i].weight));
           //g2d.drawString(String.valueOf(i) , (float)(phase1_xy[column].getX()+2), (float)(phase1_xy[column].getY()+12+(time1/unit)));
-          //System.out.println("ve: " + (phase1_xy[column].y+(time1/unit) )+ " " + ((time2/unit) - (time1/unit)));
+          //// System.out.println("ve: " + (phase1_xy[column].y+(time1/unit) )+ " " + ((time2/unit) - (time1/unit)));
       }
       
       Stroke stroke = new BasicStroke(3,
@@ -244,7 +244,7 @@ public class ShapeExample extends javax.swing.JPanel {
       }  
       
       
-      //System.out.println(unit);
+      //// System.out.println(unit);
       g2d.drawString("phase 1: "  , 550, 20);
       g2d.drawString("maxspan: " + String.valueOf(graph.makespan) , 550, 50);
       g2d.drawString("enegy: " + String.valueOf(graph.energy) , 550, 80);
