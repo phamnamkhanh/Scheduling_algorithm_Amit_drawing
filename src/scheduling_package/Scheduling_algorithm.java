@@ -146,7 +146,7 @@ public class Scheduling_algorithm {
        //Giai thuat
       // algorithm al = new algorithm(graph);
        //algorithm.schedule();
-       schedule sc= new schedule(graph,8,alpha, beta, gamma,delta,eta, sigma, mu);
+       schedule sc= new schedule(graph,12,alpha, beta, gamma,delta,eta, sigma, mu);
        //al.compute_adj();
        //al.compute_b_L();
        //al.compute_path();

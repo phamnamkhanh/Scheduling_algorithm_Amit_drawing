@@ -140,8 +140,8 @@ public class schedule {
         
      // write the output   
      for (int i=0;i<graph.nVerts;i++){
-         // System.out.println("task "+i+" tren processor: "+graph.vertexList[i].processor+" : start recon time: "+graph.vertexList[i].rst+" : finish recon time: "+graph.vertexList[i].rft+
-         //        " : start recon time: "+graph.vertexList[i].ast+" : finish time: "+graph.vertexList[i].aft);
+          System.out.println("task "+i+" tren processor: "+graph.vertexList[i].processor+" : start recon time: "+graph.vertexList[i].rst+" : finish recon time: "+graph.vertexList[i].rft+
+                 " : start recon time: "+graph.vertexList[i].ast+" : finish time: "+graph.vertexList[i].aft);
    
      }   
    
